@@ -41,7 +41,7 @@ class TableViewController: UITableViewController, todolistdelegate{
         cell.NotesLabel?.text = list[indexPath.row].notes
         cell.DateLabel?.text = list[indexPath.row].date
         if list[indexPath.row].checklist == false {
-        cell.accessoryType = UITableViewCellAccessoryType.none
+            cell.accessoryType = UITableViewCellAccessoryType.none
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.checkmark
         }
@@ -74,7 +74,7 @@ class TableViewController: UITableViewController, todolistdelegate{
         item.title = title
         item.date = date
         item.notes = notes
-        item.checklist = true
+        item.checklist = false
         list.append(item)
         do {
             try managedObjectContext.save()
